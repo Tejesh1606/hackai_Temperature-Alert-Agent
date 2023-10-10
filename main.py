@@ -21,7 +21,7 @@ async def get_weather(ctx: Context):
     ctx.storage.set("min_temp", min_temp)
     ctx.storage.set("max_temp", max_temp)
 
-    ctx.storage.set('api_key',"38c2e88646774f7019213f1986c39730")
+    ctx.storage.set('api_key',"YOUR_KEY")
 
     api_url = f"https://api.openweathermap.org/data/2.5/weather?q={ctx.storage.get('city_name')}&appid={ctx.storage.get('api_key')}"
     params = {
